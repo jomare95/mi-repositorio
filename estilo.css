@@ -10,6 +10,17 @@ html{
     scroll-behavior: smooth;
 }
 /* MENU */
+
+.contenedor-header a {
+    color: #000; /* Color del texto normal */
+    text-decoration: none; /* Quita la decoración del enlace (subrayado) */
+    transition: color 0.3s ease; /* Añade una transición suave al cambio de color */
+}
+
+/* Estilos al pasar el cursor sobre el enlace (hover) */
+.contenedor-header a:hover {
+    color: #ff0000; /* Cambia el color del texto al pasar el cursor */
+}
 .contenedor-header{
     background: #085e8f;
     position: fixed;
@@ -359,6 +370,18 @@ html{
     100%{width: 94%;}
 }
 /* SECCION CURRICULUM */
+
+.resaltado {
+    border: 2px solid rgb(8, 8, 8); /* Puedes personalizar el estilo de resaltado aquí */
+    background-color: lightyellow;
+}
+.item {
+    transition: transform 0.3s ease-in-out; /* Agregamos una transición suave al efecto de agrandar */
+}
+
+.agrandado {
+    transform: scale(1.1); /* Agrandamos el cuadro al 110% del tamaño original */
+}
 .curriculum{
     background-color: #1e2326;
     color: #cf7f0e;

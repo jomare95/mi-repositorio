@@ -31,6 +31,48 @@ function efectoHabilidades(){
         
     }
 }
+function resaltarCuadros() {
+    // Obtén todos los elementos con la clase "item"
+    var cuadros = document.querySelectorAll('.item');
+
+    // Itera sobre cada cuadro y agrega la clase "resaltado"
+    cuadros.forEach(function(cuadro) {
+        cuadro.classList.add('resaltado');
+    });
+}
+
+// Llama a la función cuando la página se carga
+window.onload = resaltarCuadros;
+function resaltarYAgrandarCuadros() {
+    // Obtén todos los elementos con la clase "item"
+    var cuadros = document.querySelectorAll('.item');
+
+    // Itera sobre cada cuadro
+    cuadros.forEach(function(cuadro) {
+        // Agrega la clase "resaltado" al pasar el cursor por encima
+        cuadro.addEventListener('mouseenter', function() {
+            cuadro.classList.add('resaltado');
+        });
+
+        // Remueve la clase "resaltado" al salir del cuadro con el cursor
+        cuadro.addEventListener('mouseleave', function() {
+            cuadro.classList.remove('resaltado');
+        });
+
+        // Agrandar el cuadro al pasar el cursor por encima
+        cuadro.addEventListener('mouseenter', function() {
+            cuadro.classList.add('agrandado');
+        });
+
+        // Restaurar el tamaño original al salir del cuadro con el cursor
+        cuadro.addEventListener('mouseleave', function() {
+            cuadro.classList.remove('agrandado');
+        });
+    });
+}
+
+// Llama a la función cuando la página se carga
+window.onload = resaltarYAgrandarCuadros;
 
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
