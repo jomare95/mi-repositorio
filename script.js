@@ -80,11 +80,24 @@ window.onscroll = function(){
     efectoHabilidades();
 }  
 function enviarFormulario() {
-    // Puedes realizar aquí cualquier validación adicional antes de enviar el formulario
+    // Obtén los datos del formulario
+    const formData = new FormData(document.getElementById('miFormulario'));
 
-    // Envía el formulario
-    document.getElementById('miFormulario').submit();
+    // Realiza una solicitud AJAX usando fetch
+    fetch('https://formspree.io/f/mknllebz', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Muestra una ventana de confirmación personalizada
+        alert("¡Formulario enviado con éxito!");
 
-    // Muestra una ventana de confirmación
-    alert("¡Formulario enviado con éxito!");
-    }
+        // Puedes agregar más lógica aquí según la respuesta de la solicitud
+        console.log(data);
+    })
+    .catch(error => {
+        // Maneja errores de la solicitud
+        console.error('Error:', error);
+    });
+}
