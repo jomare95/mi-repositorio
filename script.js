@@ -78,4 +78,4 @@ window.onload = resaltarYAgrandarCuadros;
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
     efectoHabilidades();
-} 
+}  
