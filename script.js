@@ -87,3 +87,4 @@ function enviarFormulario() {
 
     // Muestra una ventana de confirmación
     alert("¡Formulario enviado con éxito!");
+    }
