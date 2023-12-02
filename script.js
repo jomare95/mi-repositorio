@@ -79,3 +79,11 @@ window.onload = resaltarYAgrandarCuadros;
 window.onscroll = function(){
     efectoHabilidades();
 }  
+function enviarFormulario() {
+    // Puedes realizar aquí cualquier validación adicional antes de enviar el formulario
+
+    // Envía el formulario
+    document.getElementById('miFormulario').submit();
+
+    // Muestra una ventana de confirmación
+    alert("¡Formulario enviado con éxito!");
