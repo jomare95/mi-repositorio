@@ -79,7 +79,10 @@ window.onload = resaltarYAgrandarCuadros;
 window.onscroll = function(){
     efectoHabilidades();
 }  
-function enviarFormulario() {
+function enviarFormulario(event) {
+    // Evita el comportamiento predeterminado del formulario
+    event.preventDefault();
+
     // Obtén los datos del formulario
     const formData = new FormData(document.getElementById('miFormulario'));
 
@@ -101,3 +104,7 @@ function enviarFormulario() {
         console.error('Error:', error);
     });
 }
+
+// Obtiene el formulario y agrega un event listener para el evento submit
+const formulario = document.getElementById('miFormulario');
+formulario.addEventListener('submit', enviarFormulario);
