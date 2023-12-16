@@ -88,10 +88,10 @@ const procesaTodo = (event) =>{
     event.preventDefault();
     const datos = new FormData(event.target);
 
-    const nombreApellido = datos.get('nombre_apellido');
+    const nombre = datos.get('nombre');
     const correo = datos.get('correo');
     const consulta = datos.get('consulta');
-    console.log({nombreApellido,correo,consulta});
+    console.log({nombre,correo,consulta});
 
 }
 
