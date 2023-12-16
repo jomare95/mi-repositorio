@@ -22,13 +22,14 @@ app.post("/procesar-formulario", (req, res) => {
     return;
   }
 
-  const { nombre,telefono, correo, mensaje } = req.body;
+  const { nombre,telefono, correo, tema, mensaje } = req.body;
 
   const nuevoRegistro = {
     nombre: nombre,
     telefono: telefono,
     correo: correo,
-    mensaje: mensaje,
+    tema: tema,
+    mensaje: mensaje
   };
 
   let registros = [];

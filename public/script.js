@@ -16,19 +16,22 @@ function seleccionar(){
     menuVisible = false;
 }
 //Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        
-        habilidades[2].classList.add("comunicacion");
-        habilidades[3].classList.add("trabajo");
-        habilidades[4].classList.add("creatividad");
-        habilidades[5].classList.add("dedicacion");
-        
+var habilidadesAnimadas = false;
+
+function efectoHabilidades() {
+    if (!habilidadesAnimadas) {
+        var skills = document.getElementById("skills");
+        var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
+        if (distancia_skills >= 300) {
+            let habilidades = document.getElementsByClassName("progreso");
+            habilidades[0].classList.add("javascript");
+            habilidades[1].classList.add("htmlcss");
+            habilidades[2].classList.add("comunicacion");
+            habilidades[3].classList.add("trabajo");
+            habilidades[4].classList.add("creatividad");
+            habilidades[5].classList.add("dedicacion");
+            habilidadesAnimadas = true; // Marcar como animadas para evitar repetición
+        }
     }
 }
 function resaltarCuadros() {
@@ -81,18 +84,3 @@ window.onscroll = function(){
 }  
 
 
-//para el formulario.
-const formulario = document.querySelector('#miFormulario');
-
-const procesaTodo = (event) =>{
-    event.preventDefault();
-    const datos = new FormData(event.target);
-
-    const nombre = datos.get('nombre');
-    const correo = datos.get('correo');
-    const consulta = datos.get('consulta');
-    console.log({nombre,correo,consulta});
-
-}
-
-formulario.addEventListener('submit', procesaTodo);
