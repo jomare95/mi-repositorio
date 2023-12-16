@@ -79,32 +79,20 @@ window.onload = resaltarYAgrandarCuadros;
 window.onscroll = function(){
     efectoHabilidades();
 }  
-function enviarFormulario(event) {
-    // Evita el comportamiento predeterminado del formulario
+
+
+//para el formulario.
+const formulario = document.querySelector('#miFormulario');
+
+const procesaTodo = (event) =>{
     event.preventDefault();
+    const datos = new FormData(event.target);
 
-    // Obtén los datos del formulario
-    const formData = new FormData(document.getElementById('miFormulario'));
+    const nombreApellido = datos.get('nombre_apellido');
+    const correo = datos.get('correo');
+    const consulta = datos.get('consulta');
+    console.log({nombreApellido,correo,consulta});
 
-    // Realiza una solicitud AJAX usando fetch
-    fetch('https://formspree.io/f/mknllebz', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Muestra una ventana de confirmación personalizada
-        alert("¡Formulario enviado con éxito!");
-
-        // Puedes agregar más lógica aquí según la respuesta de la solicitud
-        console.log(data);
-    })
-    .catch(error => {
-        // Maneja errores de la solicitud
-        console.error('Error:', error);
-    });
 }
 
-// Obtiene el formulario y agrega un event listener para el evento submit
-const formulario = document.getElementById('miFormulario');
-formulario.addEventListener('submit', enviarFormulario);
+formulario.addEventListener('submit', procesaTodo);
