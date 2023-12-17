@@ -12,5 +12,12 @@
     "correo": "marina@gmail.com",
     "tema": "pregunta",
     "mensaje": "quisiera saber como hacer para llevar a cabo una cita para hablar sobre un proyecto de software"
+  },
+  {
+    "nombre": "rodrigo rodriguez",
+    "telefono": "3704 412805",
+    "correo": "correo@gmail.com",
+    "tema": "consulta",
+    "mensaje": "hola, que dias atiendes?"
   }
 ]

@@ -15,25 +15,7 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-//Funcion que aplica las animaciones de las habilidades
-var habilidadesAnimadas = false;
 
-function efectoHabilidades() {
-    if (!habilidadesAnimadas) {
-        var skills = document.getElementById("skills");
-        var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-        if (distancia_skills >= 300) {
-            let habilidades = document.getElementsByClassName("progreso");
-            habilidades[0].classList.add("javascript");
-            habilidades[1].classList.add("htmlcss");
-            habilidades[2].classList.add("comunicacion");
-            habilidades[3].classList.add("trabajo");
-            habilidades[4].classList.add("creatividad");
-            habilidades[5].classList.add("dedicacion");
-            habilidadesAnimadas = true; // Marcar como animadas para evitar repetición
-        }
-    }
-}
 function resaltarCuadros() {
     // Obtén todos los elementos con la clase "item"
     var cuadros = document.querySelectorAll('.item');
@@ -78,9 +60,6 @@ function resaltarYAgrandarCuadros() {
 window.onload = resaltarYAgrandarCuadros;
 
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-}  
+
 
 
