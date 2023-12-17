@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="carrusel.css">
     
 </head>
 <body>
@@ -20,7 +21,7 @@
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
@@ -87,69 +88,49 @@
     </section>
 
     <!-- SECCION SKILLS -->
-    <section class="skills" id="skills">
-        <div class="contenido-seccion">
-            <h2>Skills</h2>
-            <div class="fila">
-                <!-- Technical Skill -->
-                <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
-                        <span>Javascript</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>75%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>HTML & CSS</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>89%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
+    <section class="mb-5 habilities" id="skills" data-loaded="false">
+        <div class="m-3 text-center">
+            <h1 class="fs-1 fw-bold">Habilidades:</h1>
+            <div class="d-inline-flex justify-content-around">
+                <div class="p-3 m-2 bg-light-subtle rounded">
+                    <h3 class="heartbeat">Web Developer.</h3>
                 </div>
-                <!-- Professional Skills -->
+                
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center" data-loaded="false">
+            <div class="scroller" data-speed="fast">
+                <ul class="tag-list scroller__inner">
+                    <li><img src="img/html.JPG" width="100px" height="100px"></li>
+                    <li><img src="img/logoCSS.JPG" width="100px" height="100px"></li>
+                    <li><img src="img/logoJS.JPG" width="100px" height="100px"></li>
+                    <li><img src="img/logoPHP.JPG" width="100px" height="100px"></li>
+                    <li><img src="img/nodejs.JPG" width="100px" height="100px"></li>
+                    <li><img src="img/gitlogo.JPG" width="100px" height="100px"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-3">
+            <h4 class="fw-bolder">Tags</h4>
+            <div class="row gap-2 ">
                 <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
-                        <span>Comunicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Trabajo en Equipo</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>70%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>95%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>65%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <span class="badge fs-5 text-bg-primary">Web Developer</span>
+                </div>
+                <div class="col">
+                    <span class="badge fs-5 text-bg-primary">Desarrollador Web</span>
+                </div>
+                <div class="col">
+                    <span class="badge fs-5 text-bg-primary">SQL</span>
+                </div>
+
+                
+                <div class="col">
+                    <span class="badge fs-5 text-bg-primary">JavaScript</span>
+                </div>
+                
+                <div class="col">
+                    <span class="badge fs-5 text-bg-primary">Php Developer</span>
                 </div>
             </div>
         </div>
@@ -313,5 +294,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="carrusel.js"></script>
 </body>
 </html>

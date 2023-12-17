@@ -1,3 +1,16 @@
 [
- 
+  {
+    "nombre": "juan jose",
+    "telefono": "3704 412805",
+    "correo": "juanjo.pintos@gmail.com",
+    "tema": "consulta",
+    "mensaje": "Buenas noches, esto es una consulta"
+  },
+  {
+    "nombre": "marina blanco",
+    "telefono": "9876 54321",
+    "correo": "marina@gmail.com",
+    "tema": "pregunta",
+    "mensaje": "quisiera saber como hacer para llevar a cabo una cita para hablar sobre un proyecto de software"
+  }
 ]
